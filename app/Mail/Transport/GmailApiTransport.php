@@ -40,7 +40,7 @@ class GmailApiTransport extends AbstractTransport
 
         // Send using the Gmail API messages.send endpoint
         $response = Http::withToken($accessToken)
-            ->post('https://gmail.googleapis.com/v1/users/me/messages/send', [
+            ->post('https://gmail.googleapis.com/gmail/v1/users/me/messages/send', [
                 'raw' => $safeRawMessage
             ]);
 
