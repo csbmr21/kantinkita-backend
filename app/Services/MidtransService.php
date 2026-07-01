@@ -91,8 +91,6 @@ class MidtransService
         $frontendUrl = rtrim(env('FRONTEND_URL', 'http://localhost:5173'), '/');
         $params['callbacks'] = [
             'finish'   => $frontendUrl . '/orders',
-            'unfinish' => $frontendUrl . '/orders',
-            'error'    => $frontendUrl . '/orders',
         ];
 
         $snapToken = Snap::getSnapToken($params);
